@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cs-{{ template "appstore.name" . }}
+  labels:
+    app: cs-{{ template "appstore.name" . }}
+spec:
+  type: LoadBalancer 
+  ports:
+  - port: 8000
+    targetPort: 8000
+  selector:
+    app: cs-{{ template "appstore.name" . }}
