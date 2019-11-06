@@ -3,6 +3,7 @@ kind: Pod
 metadata:
   labels:
     service: {{ template "tycho-api.name" . }}
+    app: {{ template "tycho-api.name" . }}
   name: {{ template "tycho-api.name" . }}
 spec:
   containers:
