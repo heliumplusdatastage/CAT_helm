@@ -15,15 +15,19 @@ If on GCP GKE,
 ```gcloud compute disks create appstore-db-volume --size 5Gi --zone <Cluster zone>```
 
 Step-2: Deploy chart using the command below,
-“helm install <Name> ./CAT_helm --namespace <desired namespace>”
+
+```helm install <Name> ./CAT_helm --namespace <desired namespace>```
 
 Here are kubectl commands showing its status after it’s installed.
 
 Use the command below to get the list of pods,
-“kubectl get pods”
+
+```kubectl get pods --namespace <desired namespace>```
 
 Use the command below to get the list of services,
-“kubectl get svc”
+
+```kubectl get svc --namespace <desired namespace>```
 
 Use the command below to get a detailed description of the pod,
-“kubectl describe pods <name of the pod>”
+
+```kubectl describe pods <name of the pod> --namespace <desired namespace>```
