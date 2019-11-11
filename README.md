@@ -11,7 +11,8 @@ Prerequisites:
 2) Clone the repo.
 
 Step-1: Appstore postgres DB requires a persistent disk with a name (appsstore-db-volume). Use the command to create a persistent disk,
-“gcloud compute disks create appstore-db-volume --size 5Gi --zone <Cluster zone>”
+If on GCP GKE,
+```gcloud compute disks create appstore-db-volume --size 5Gi --zone <Cluster zone>```
 
 Step-2: Deploy chart using the command below,
 “helm install <Name> ./CAT_helm --namespace <desired namespace>”
