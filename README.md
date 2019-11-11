@@ -19,7 +19,9 @@ If on GCP GKE,
 Step-2: The tycho-api requires a cluster-role, binding and service account with cluster-admin access. Since the scope of these resources is cluster-wide, execute the following commands on the cluster to check if the resources(tycho-api-access ClusterRole and binding, default ServiceAccount) already exist.
 
 ```kubectl get clusterrole```
+
 ```kubectl get clusterrolebinding```
+
 ```kubectl get serviceaccount```
 
 If they don't exist, move the role.yaml and serviceaccount.yaml into the CAT_helm/charts/tycho-api/templates directory.
