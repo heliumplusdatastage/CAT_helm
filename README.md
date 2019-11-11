@@ -31,7 +31,7 @@ Step-3: Deploy chart using the command below,
 ```helm install <Name> ./CAT_helm --namespace <desired namespace>```
 
 
-Here are kubectl commands showing its status after it’s installed.
+#Here are kubectl commands showing its status after it’s installed.
 
 Use the command below to get the list of pods,
 
