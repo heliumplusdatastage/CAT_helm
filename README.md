@@ -14,7 +14,7 @@ Step-1: Appstore postgres DB requires a persistent disk with a name (appsstore-d
 “gcloud compute disks create appstore-db-volume --size 5Gi --zone <Cluster zone>”
 
 Step-2: Deploy chart using the command below,
-“helm install <Name> ./CAT_helm”
+“helm install <Name> ./CAT_helm --namespace <desired namespace>”
 
 Here are kubectl commands showing its status after it’s installed.
 
