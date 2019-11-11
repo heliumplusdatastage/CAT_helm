@@ -24,7 +24,7 @@ Step-2: The tycho-api requires a cluster-role, binding and service account with 
 
 ```kubectl get serviceaccount```
 
-If they don't exist, move the role.yaml and serviceaccount.yaml into the CAT_helm/charts/tycho-api/templates directory.
+If they don't exist, move the role.yaml and serviceaccount.yaml into the "CAT_helm/charts/tycho-api/templates" directory.
 
 Step-2: Deploy chart using the command below,
 
