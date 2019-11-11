@@ -16,6 +16,14 @@ If on GCP GKE,
 
 ```gcloud compute disks create appstore-db-volume --size 5Gi --zone <Cluster zone>```
 
+Step-2: The tycho-api requires a cluster-role, binding and service account with cluster-admin access. Since the scope of these resources is cluster-wide, execute the following commands on the cluster to check if the resources(tycho-api-access ClusterRole and binding, default ServiceAccount) already exist.
+
+```kubectl get clusterrole```
+```kubectl get clusterrolebinding```
+```kubectl get serviceaccount```
+
+If they don't exist, move the role.yaml and serviceaccount.yaml into the CAT_helm/charts/tycho-api/templates directory.
+
 Step-2: Deploy chart using the command below,
 
 ```helm install <Name> ./CAT_helm --namespace <desired namespace>```
