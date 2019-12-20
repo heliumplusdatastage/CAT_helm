@@ -5,7 +5,7 @@ metadata:
   labels:
     app: cs-{{ template "appstore.name" . }}
 spec:
-  type: LoadBalancer 
+  type: LoadBalancer
   ports:
   - port: 8000
     targetPort: 8000
