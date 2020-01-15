@@ -22,7 +22,7 @@ spec:
         - --name=tycho
         - --timeout=600
         - tycho.api:app
-        image: heliumdatastage/tycho-api:multi
+        image: heliumdatastage/tycho-api:bdcat-v3
         imagePullPolicy: "Always"
         name: {{ template "tycho-api.name" . }}
         ports:
