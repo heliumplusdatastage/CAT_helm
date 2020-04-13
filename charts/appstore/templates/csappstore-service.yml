@@ -4,8 +4,25 @@ metadata:
   name: cs-{{ template "appstore.name" . }}
   labels:
     app: cs-{{ template "appstore.name" . }}
+  {{ if .values.ambassador.flag }}
+  annotations:
+    getambassador.io/config: |
+      ---
+      apiVersion: ambassador/v1
+      kind:  Mapping
+      name:  appstore-mapping
+      prefix: /
+      service: cs-appstore:8000
+      timeout_ms: 300000
+      idle_timeout_ms: 500000
+      connect_timeout_ms: 500000
+   {{ end }}
 spec:
+  {{ if .Values.ambassador.flag }}
+  type: ClusterIP
+  {{ else }}
   type: LoadBalancer
+  {{ end }}
   ports:
   - port: 8000
     targetPort: 8000
