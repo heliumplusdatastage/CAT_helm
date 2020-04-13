@@ -66,3 +66,6 @@ db:
   image: postgres:10.4
   disk_name: example
   storageClass: ""
+
+ambassador:
+   flag: <True or False>
