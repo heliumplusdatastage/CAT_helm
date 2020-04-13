@@ -68,5 +68,6 @@ affinity: {}
 web:
   db:
     name: postgis
+    storageClass: ""
   tool:
     name: solr

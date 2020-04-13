@@ -65,4 +65,4 @@ db:
   name: postgres
   image: postgres:10.4
   disk_name: example
-  
+  storageClass: ""
