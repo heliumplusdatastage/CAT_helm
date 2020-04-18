@@ -13,7 +13,7 @@ spec:
     - --name=tycho
     - --timeout=600
     - tycho.api:app
-    image: heliumdatastage/tycho-api:v1.0
+    image: {{ .Values.image }}
     imagePullPolicy: "Always"
     name: {{ template "tycho-api.name" . }}
     ports:
