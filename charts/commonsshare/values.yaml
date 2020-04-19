@@ -71,7 +71,3 @@ web:
     storageClass: ""
   tool:
     name: solr
-
-ambassador:
-   # flag: <True or False>
-   flag: True

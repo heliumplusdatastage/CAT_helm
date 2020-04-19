@@ -18,11 +18,7 @@ metadata:
       connect_timeout_ms: 500000
    {{- end }}
 spec:
-  {{- if .Values.ambassador.flag }}
-  type: ClusterIP
-  {{- else }}
-  type: LoadBalancer
-  {{- end }}
+  type: {{ .Values.service.type }}
   ports:
   - port: 8000
     targetPort: 8000
