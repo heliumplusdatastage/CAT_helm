@@ -22,3 +22,11 @@ resources:
   requests:
      cpu: 100m
      memory: 128Mi
+
+# image: heliumdatastage/tycho-api:bdcat-v3
+# image: heliumdatastage/tycho-api:braini
+image: heliumdatastage/tycho-api:v1.0
+
+ambassador:
+   # flag: <True or False>
+   flag: True

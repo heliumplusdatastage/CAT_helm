@@ -6,7 +6,11 @@ metadata:
     service: {{ template "tycho-api.name" . }}
   name: {{ template "tycho-api.name" . }}
 spec:
+  {{- if .Values.ambassador.flag }}
+  type: ClusterIP
+  {{- else }}
   type: LoadBalancer
+  {{- end }}
   selector:
     app: {{ template "tycho-api.name" . }}
   ports:

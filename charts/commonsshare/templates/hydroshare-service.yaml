@@ -9,7 +9,11 @@ metadata:
     io.kompose.service: {{ template "commonsshare.name" . }}
   name: {{ template "commonsshare.name" . }}
 spec:
+  {{- if .Values.ambassador.flag }}
+  type: ClusterIP
+  {{- else }}
   type: LoadBalancer
+  {{- end }}
   ports:
   - name: "8000"
     port: 8000

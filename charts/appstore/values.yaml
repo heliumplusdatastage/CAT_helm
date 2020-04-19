@@ -68,4 +68,5 @@ db:
   storageClass: ""
 
 ambassador:
-   flag: <True or False>
+   # flag: <True or False>
+   flag: True
