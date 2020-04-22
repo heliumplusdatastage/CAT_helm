@@ -41,17 +41,6 @@ rules:
   - deletecollection
   - patch
   - update
-- apiGroups:
-  - rbac.authorization.k8s.io/v1
-  resources:
-  - clusterrole
-  - clusterrolebinding
-  verbs:
-  - create
-  - delete
-  - deletecollection
-  - patch
-  - update
 ---
 kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
