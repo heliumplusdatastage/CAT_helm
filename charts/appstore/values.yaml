@@ -71,4 +71,4 @@ ambassador:
    # flag: <True or False>
    flag: True
 
-image: "heliumdatastage/commonsshare_appstore:1.1.5"
+image: "heliumdatastage/commonsshare_appstore:1.1.22"
