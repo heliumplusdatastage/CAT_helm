@@ -18,8 +18,6 @@ rules:
   - ingresses
   - replicasets
   - replicasets/scale
-  - clusterrole
-  - clusterrolebinding
   - networkpolicies
   - deployments
   - replicasets
