@@ -24,3 +24,4 @@ resources:
      memory: 128Mi
 
 image: heliumdatastage/tycho-api:v1.0
+# image: heliumdatastage/tycho-api:dev-1.0
