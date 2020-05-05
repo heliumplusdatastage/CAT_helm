@@ -71,4 +71,10 @@ ambassador:
    # flag: <True or False>
    flag: True
 
-image: "heliumdatastage/commonsshare_appstore:1.1.22"
+image: "heliumdatastage/commonsshare_appstore:1.1.24"
+# image: heliumdatastage/commonsshare_appstore:dev-1.0
+# valid settingsModule settings
+# CS_AppsStore.settings.braini_settings
+# CS_AppsStore.settings.scidas_settings
+# CS_AppsStore.settings.cat_settings
+settingsModule: CS_AppsStore.settings.braini_settings
