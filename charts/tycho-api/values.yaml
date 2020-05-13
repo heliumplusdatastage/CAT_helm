@@ -25,3 +25,7 @@ resources:
 
 image: heliumdatastage/tycho-api:v1.0
 # image: heliumdatastage/tycho-api:dev-1.0
+
+prp:
+   # PRP cluster deployment: <True or False>
+   deployment: False
