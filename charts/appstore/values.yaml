@@ -67,14 +67,23 @@ db:
   disk_name: example
   storageClass: ""
 
+# Define oauth settings for having a persistent sqlite3 database.  Leave both
+# pvcname and storageClass empty to storage the oauth db inside the container.
+# Define pvcname only if the PVC is already created.
+# Define storageClass to have this chart create a PVC, otherwise it expects
+# one to exist.
+oauth:
+  pvcname:
+#   pvcname: appstore-oauth-pvc
+  storageClass:
+#   storageClass: appstore-oauth-sc
+
 ambassador:
    # flag: <True or False>
    flag: True
 
-image: "heliumdatastage/commonsshare_appstore:1.1.24"
+image: "heliumdatastage/appstore:metadata-latest"
 # image: heliumdatastage/commonsshare_appstore:dev-1.0
-# valid settingsModule settings
-# CS_AppsStore.settings.braini_settings
-# CS_AppsStore.settings.scidas_settings
-# CS_AppsStore.settings.cat_settings
-settingsModule: CS_AppsStore.settings.braini_settings
+# imagePullSecrets: some-secret
+
+djangoSettings: braini
