@@ -61,6 +61,16 @@ spec:
             configMapKeyRef:
               key: OAUTH_DB_FILE
               name: csappstore-env
+        - name: ACCOUNT_DEFAULT_HTTP_PROTOCOL
+          valueFrom:
+            configMapKeyRef:
+              key: ACCOUNT_DEFAULT_HTTP_PROTOCOL
+              name: csappstore-env
+        - name: TYCHO_URL
+          valueFrom:
+            configMapKeyRef:
+              key: TYCHO_URL
+              name: csappstore-env
         - name: CSAPPSTORE_SECRET_KEY
           valueFrom:
             secretKeyRef:

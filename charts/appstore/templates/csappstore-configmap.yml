@@ -11,6 +11,8 @@ data:
   # /var/lib/sqlite3 is used for PVC mount point.
   OAUTH_DB_DIR: /var/lib/sqlite3
   OAUTH_DB_FILE: DATABASE.sqlite3
+  ACCOUNT_DEFAULT_HTTP_PROTOCOL: https
+  TYCHO_URL: http://tycho-api:8099
 kind: ConfigMap
 metadata:
   labels:
